@@ -1,7 +1,18 @@
 import React, { FC } from "react";
-import { DataInterface } from "../FeaturedProducts/FeaturedProducts";
+import { DataProps } from "../FeaturedProducts/FeaturedProducts";
 import Card from "../Card/Card";
-const data: DataInterface[] = [
+
+export interface ListProps2 {
+  id: number;
+  img: string;
+  img2: string;
+  title: string;
+  desc?: string;
+  oldPrice: number;
+  price: number;
+  isNew: boolean;
+}
+const data: ListProps2[] = [
   {
     id: 1,
     img: "https://images.pexels.com/photos/1382907/pexels-photo-1382907.jpeg?auto=compress&cs=tinysrgb&w=400",
@@ -14,6 +25,7 @@ const data: DataInterface[] = [
   {
     id: 2,
     img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img2: "https://images.pexels.com/photos/2417857/pexels-photo-2417857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Tshirts",
     isNew: true,
     oldPrice: 13,
@@ -22,6 +34,7 @@ const data: DataInterface[] = [
   {
     id: 3,
     img: "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img2: "https://images.pexels.com/photos/2417857/pexels-photo-2417857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Stethoscope",
     isNew: false,
     oldPrice: 130,
@@ -30,6 +43,7 @@ const data: DataInterface[] = [
   {
     id: 4,
     img: "https://images.pexels.com/photos/6786706/pexels-photo-6786706.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img2: "https://images.pexels.com/photos/2417857/pexels-photo-2417857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Totte Bags",
     isNew: false,
     oldPrice: 3,
@@ -46,7 +60,7 @@ interface ListProps {
 const List: FC<ListProps> = ({ catId, maxPrice, sort }) => {
   return (
     <div className="flex justify-between flex-wrap">
-      {data?.map((item) => (
+      {data.map((item) => (
         <Card {...item} key={item.id} />
       ))}
     </div>
