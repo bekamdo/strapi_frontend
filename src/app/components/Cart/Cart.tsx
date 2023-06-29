@@ -1,9 +1,19 @@
 import React from "react";
-import { DataInterface } from "../FeaturedProducts/FeaturedProducts";
+
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import Image from "next/image";
+export interface CartProps {
+  id: number;
+  img: string;
+  img2?: string;
+  title: string;
+  desc: string;
+  oldPrice: number;
+  price: number;
+  isNew: boolean;
+}
 
-const data: DataInterface[] = [
+const data: CartProps[] = [
   {
     id: 1,
     img: "https://images.pexels.com/photos/1382907/pexels-photo-1382907.jpeg?auto=compress&cs=tinysrgb&w=400",
