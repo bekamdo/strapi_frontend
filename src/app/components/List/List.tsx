@@ -15,7 +15,7 @@ export interface ListProps2 {
 const data: ListProps2[] = [
   {
     id: 1,
-    img: "https://images.pexels.com/photos/1382907/pexels-photo-1382907.jpeg?auto=compress&cs=tinysrgb&w=400",
+    img: "https://images.pexels.com/photos/593332/pexels-photo-593332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     img2: "https://images.pexels.com/photos/2417857/pexels-photo-2417857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Top Quality Mugs",
     isNew: true,
@@ -25,7 +25,7 @@ const data: ListProps2[] = [
   {
     id: 2,
     img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    img2: "https://images.pexels.com/photos/2417857/pexels-photo-2417857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img2: "https://images.pexels.com/photos/13952577/pexels-photo-13952577.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Tshirts",
     isNew: true,
     oldPrice: 13,
@@ -34,7 +34,7 @@ const data: ListProps2[] = [
   {
     id: 3,
     img: "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    img2: "https://images.pexels.com/photos/2417857/pexels-photo-2417857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img2: "https://images.pexels.com/photos/1724181/pexels-photo-1724181.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Stethoscope",
     isNew: false,
     oldPrice: 130,
@@ -43,7 +43,7 @@ const data: ListProps2[] = [
   {
     id: 4,
     img: "https://images.pexels.com/photos/6786706/pexels-photo-6786706.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    img2: "https://images.pexels.com/photos/2417857/pexels-photo-2417857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img2: "https://images.pexels.com/photos/248412/pexels-photo-248412.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Totte Bags",
     isNew: false,
     oldPrice: 3,
