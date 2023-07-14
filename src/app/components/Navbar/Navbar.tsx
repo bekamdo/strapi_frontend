@@ -23,53 +23,14 @@ const Navbar = () => {
       <nav className="h-20 relative">
         <div className="py-2 px-8 flex items-center justify-between">
           {/* firstItem */}
-          <div className="hidden lg:flex item-center gap-6">
-            <div className="flex items-center">
+          <div className="hidden md:flex item-center gap-4">
+            <div className="hidden lg:flex items-center">
               <Image src={En} alt="flag" width={30} height={30} />
               <KeyboardArrowDownIcon />
-            </div>
-            <div className="lg:flex items-center">
               <span>USD</span>
               <KeyboardArrowDownIcon />
             </div>
-            <div className="flex items-center text-lg">
-              <Link href="/products/1">Women </Link>
-            </div>
-            <div className="flex items-center text-lg">
-              <Link href="/products/2">Men </Link>
-            </div>
-            <div className="flex items-center text-lg ">
-              <Link href="/products/3">Bags </Link>
-            </div>
-          </div>
-          {/* secondItem */}
-          <div className="flex justify-between md:flex  items-center  text-xl">
-            <Link href="/">BENS STORE</Link>
-          </div>
-          <div className="flex gap-10">
-            <div
-              className="lg:hidden cursor-pointer  relative"
-              onClick={() => setOpen(!open)}
-            >
-              <ShoppingCartOutlinedIcon />
-              <span className="text-[12px] w-5 h-5 rounded-[50%] bg-blue-700 text-white absolute right-[-10px] top-[-10px] flex items-center justify-center">
-                {products.length}
-              </span>
-            </div>
-            <div
-              className="lg:hidden items-center cursor-pointer"
-              onClick={() => setOpenModal(!openModal)}
-            >
-              {openModal ? <CloseIcon /> : <MenuIcon />}
-            </div>
-          </div>
 
-          {/* ThirdItem */}
-
-          <div className="hidden lg:flex item-center gap-6">
-            <div className="flex items-center text-lg">
-              <Link href="/">HomePage </Link>
-            </div>
             <div className="flex items-center text-lg">
               <Link href="/products/5">Lab Coats</Link>
             </div>
@@ -79,10 +40,47 @@ const Navbar = () => {
             <div className="flex items-center text-lg">
               <Link href="/products/4">Stethoscopes </Link>
             </div>
+          </div>
+          {/* secondItem */}
+          <div className="flex justify-between md:flex  items-center  text-xl">
+            <Link href="/">BENS STORE</Link>
+          </div>
+          <div className="flex gap-10">
+            <div
+              className="md:hidden cursor-pointer  relative"
+              onClick={() => setOpen(!open)}
+            >
+              <ShoppingCartOutlinedIcon />
+              <span className="text-[12px] w-5 h-5 rounded-[50%] bg-blue-700 text-white absolute right-[-10px] top-[-10px] flex items-center justify-center">
+                {products.length}
+              </span>
+            </div>
+            <div
+              className="md:hidden items-center cursor-pointer"
+              onClick={() => setOpenModal(!openModal)}
+            >
+              {openModal ? <CloseIcon /> : <MenuIcon />}
+            </div>
+          </div>
+
+          {/* ThirdItem */}
+
+          <div className="hidden md:flex item-center gap-6">
+            <div className="flex items-center text-lg">
+              <Link href="/products/1">Women </Link>
+            </div>
+            <div className="flex items-center text-lg">
+              <Link href="/products/2">Men </Link>
+            </div>
+            <div className="flex items-center text-lg ">
+              <Link href="/products/3">Bags </Link>
+            </div>
             <div className="flex items-center  gap-4 text-gray-500 cursor-pointer">
-              <SearchIcon />
-              <PersonOutlineOutlinedIcon />
-              <FavoriteBorderOutlinedIcon />
+              <div className="hidden lg:flex gap-4 items-center">
+                <SearchIcon />
+                <PersonOutlineOutlinedIcon />
+                <FavoriteBorderOutlinedIcon />
+              </div>
               <div className=" relative" onClick={() => setOpen(!open)}>
                 <ShoppingCartOutlinedIcon />
                 <span className="text-[12px] w-5 h-5 rounded-[50%] bg-blue-700 text-white absolute right-[-10px] top-[-10px] flex items-center justify-center">
@@ -94,7 +92,7 @@ const Navbar = () => {
         </div>
         {open && <Cart />}
         {/* Mobile Menu */}
-        <div className="lg:hidden">
+        <div className="md:hidden">
           <div
             className={`absolute z-[999] ${
               !openModal ? "hidden" : "flex"

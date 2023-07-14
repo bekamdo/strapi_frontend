@@ -10,14 +10,14 @@ const Card: FC<IDataItem> = ({ ...item }) => {
   return (
     <>
       <Link href={`/product/${item.id}`}>
-        <div className=" w-[350px] cursor-pointer justify-center md:w-[280px] flex flex-row gap-2 mb-12 overflow-hidden h-[400px] relative [&>*:first-child]:hover:z-20 ease-in-out duration-300 ">
+        <div className=" w-[90%] flex-col cursor-pointer justify-center md:w-[280px] flex md:flex-row gap-2 mb-12 overflow-hidden h-[400px] relative [&>*:first-child]:hover:z-20 ease-in-out duration-300 ">
           <img
             src={
               process.env.NEXT_PUBLIC_API_UPLOAD_URL +
               item.attributes.img?.data.attributes.url
             }
             alt=""
-            className="object-cover absolute w-full h-full "
+            className="object-cover absolute  w-full h-full "
           />
 
           <img

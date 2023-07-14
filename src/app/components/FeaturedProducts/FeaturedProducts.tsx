@@ -79,8 +79,8 @@ const FeaturedProducts: FC<FeaturedProductsProps> = ({ type }) => {
   );
 
   return (
-    <div className="my-24 mx-0 p-3 md:mx-48 relative">
-      <div className="flex flex-col justify-center  gap-2 md:flex-row items-center md:justify-between mb-12">
+    <div className="my-24 mx-0 p-3  md:mx-48 relative">
+      <div className="flex flex-col justify-center space-y-2  gap-2 lg:flex-row items-center md:justify-between mb-12">
         <h1 className="md:flex-[2] text-center capitalize text-lg font-semibold">
           {type} Products
         </h1>
@@ -94,7 +94,7 @@ const FeaturedProducts: FC<FeaturedProductsProps> = ({ type }) => {
         </p>
       </div>
 
-      <div className="flex overflow-x-scroll scrollbar-thin  scrollbar-thumb-blue-700 cursor-pointer scrollbar-track-gray-300 gap-4 md:flex-row lg:scrollbar-hide md:justify-center  md:gap-12">
+      <div className="flex flex-col md:flex-row scrollbar-thin  scrollbar-thumb-blue-700 cursor-pointer scrollbar-track-gray-300 gap-4  lg:scrollbar-hidden justify-center md:gap-12">
         {error ? (
           <Alert severity="error">Something went wrong</Alert>
         ) : loading ? (
