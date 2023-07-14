@@ -94,7 +94,7 @@ const FeaturedProducts: FC<FeaturedProductsProps> = ({ type }) => {
         </p>
       </div>
 
-      <div className="flex overflow-x-scroll scrollbar-thin  scrollbar-thumb-blue-700 cursor-pointer scrollbar-track-gray-300 gap-4 md:flex-row lg:scrollbar-hide md:items-center  md:gap-12">
+      <div className="flex overflow-x-scroll scrollbar-thin  scrollbar-thumb-blue-700 cursor-pointer scrollbar-track-gray-300 gap-4 md:flex-row lg:scrollbar-hide md:justify-center  md:gap-12">
         {error ? (
           <Alert severity="error">Something went wrong</Alert>
         ) : loading ? (
