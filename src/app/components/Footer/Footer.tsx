@@ -5,7 +5,7 @@ import Logo from "/public/images/payment.png";
 const Footer = () => {
   return (
     <footer className="mt-[100px] mr-[200px] mb-5 ml-[200px]">
-      <div className="flex gap-12">
+      <div className="hidden md:flex gap-12">
         <div className="flex-1 flex flex-col gap-2 text-justify text-sm">
           <h1 className="text-lg font-bold text-gray-700">Categories</h1>
           <span className="text-gray-500">Women</span>
@@ -37,10 +37,13 @@ const Footer = () => {
           </span>
         </div>
       </div>
-      <div className="flex items-center justify-between mt-10">
-        <div className="flex gap-40 items-center">
-          <span className="text-blue-700 font-bold text-md">Ben'sstore</span>
-          <span className="  text-xs font-light text-gray-400 ">
+      <div className="flex  justify-between mt-10">
+        <div className="flex justify-between gap-20 items-center">
+          <span className="hidden md:block text-blue-700  font-bold text-md">
+            Ben's store
+          </span>
+
+          <span className="hidden md:block text-xs font-light text-gray-400 ">
             ©Copyright 2023.All Rights Reserved
           </span>
         </div>
