@@ -98,7 +98,6 @@ const Navbar = () => {
               !openModal ? "hidden" : "flex"
             } flex-col items-center self-end  py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md transition-all duration-200 ease-in-out`}
           >
-            <Link href="/">HomePage </Link>
             <Link href="/products/1">Women </Link>
             <Link href="/products/2">Men </Link>
             <Link href="/products/3">Bags </Link>

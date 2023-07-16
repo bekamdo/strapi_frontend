@@ -22,16 +22,17 @@ const page = ({ params }: { params: { id: string } }) => {
         ? [...selectedSubCats, value]
         : selectedSubCats.filter((item) => item !== value)
     );
+    console.log(value);
   };
 
   return (
-    <div className="flex flex-col md:flex-row gap-20">
+    <div className="flex flex-col px-4 md:flex-row gap-20">
       {/* left */}
       <div className="flex-2 justify-start sticky h-full top-12">
         {/* filterItems */}
         <div className="hidden md:block mb-8">
           <h2 className="font-normal text-lg mb-5">Product Categories</h2>
-          <div className="flex flex-col gap-2 justify-start">
+          <div className="flex flex-col  gap-2 md:justify-start">
             {data?.map((item) => (
               <div className="flex gap-1" key={item.id}>
                 <input
@@ -95,7 +96,7 @@ const page = ({ params }: { params: { id: string } }) => {
             className="object-cover"
           />
         </div>
-        <div className="flex justify-center w-full">
+        <div className="flex justify-center">
           <List
             catId={catId}
             maxPrice={maxPrice}

@@ -15,12 +15,12 @@ const List: FC<ListProps> = ({ catId, maxPrice, sort, subCats }) => {
   const { data, loading, error } = useFetch<IDataItem[]>(
     `/products?populate=*&[filters][categories][id]=${catId}
     ${subCats.map((item) => `&[filters][sub_categories][id][$eq]=${item}`)}
-    &[filters][price][$lte]=${maxPrice}&sort=price:${sort}`
+    &[filters][price][$lte]=${maxPrice}&sort=price:${sort}`.replace(/,/g, "")
   );
 
   return (
-    <div className="flex   md:justify-between md:flex-wrap">
-      <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-12 ">
+    <div className="flex  justify-center md:flex-wrap">
+      <div className="flex min-w-[300px] flex-wrap justify-center gap-0   md:flex-row  md:gap-12 ">
         {error ? (
           <Alert severity="error">Something went wrong</Alert>
         ) : loading ? (

@@ -18,6 +18,7 @@ export type IAttributes = {
   title?: string;
   desc?: string;
   price?: number;
+  oldPrice?: number;
   isNew?: boolean;
   createdAt: string;
   updatedAt: string;
