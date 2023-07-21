@@ -10,7 +10,7 @@ const Card: FC<IDataItem> = ({ ...item }) => {
   return (
     <>
       <Link href={`/product/${item.id}`}>
-        <div className="min-w-[300px] flex-col cursor-pointer justify-center md:w-[280px] flex md:flex-row gap-2 mb-12 overflow-hidden h-[400px] relative [&>*:first-child]:hover:z-20 ease-in-out duration-300 ">
+        <div className="min-w-[365px] p-4 flex-col cursor-pointer justify-center md:min-w-[280px] flex md:flex-row gap-4 mb-12 overflow-hidden h-[400px] relative [&>*:first-child]:hover:z-20 ease-in-out duration-300 ">
           <img
             src={
               process.env.NEXT_PUBLIC_API_UPLOAD_URL +
@@ -35,9 +35,9 @@ const Card: FC<IDataItem> = ({ ...item }) => {
           )}
         </div>
 
-        <h2 className="text-sm font-light">{item.attributes.title}</h2>
+        <h2 className="px-4  text-sm font-light">{item.attributes.title}</h2>
         {/* prices */}
-        <div className="flex gap-5 [&>*:first-child]:line-through">
+        <div className="flex  px-4 gap-5 [&>*:first-child]:line-through">
           <h3 className="text-lg font-bold text-gray-400">
             ${item?.attributes?.oldPrice}
           </h3>

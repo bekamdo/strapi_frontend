@@ -7,6 +7,7 @@ import { Alert, CircularProgress } from "@mui/material";
 
 interface FeaturedProductsProps {
   type: string;
+  para: string;
 }
 
 // @flow
@@ -74,7 +75,7 @@ export type ISub_categories = {
   data: any[];
 };
 
-const FeaturedProducts: FC<FeaturedProductsProps> = ({ type }) => {
+const FeaturedProducts: FC<FeaturedProductsProps> = ({ type, para }) => {
   const { data, loading, error } = useFetch<IDataItem[]>(
     `/products?populate=*&[filters][type][$eq] =${type}`
   );
@@ -86,20 +87,18 @@ const FeaturedProducts: FC<FeaturedProductsProps> = ({ type }) => {
           {type} Products
         </h1>
 
-        <p className="md:flex-[3] text-gray-500">
-          {" "}
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum dolore
-          fugit nam cupiditate modi velit asperiores nulla esse quidem, eum
-          eveniet! Tempore illo blanditiis, delectus consequatur nemo velit
-          repellendus ex.
-        </p>
+        <p className="md:flex-[3] text-gray-500">{para}</p>
       </div>
 
-      <div className="flex flex-col md:flex-row scrollbar-thin  scrollbar-thumb-blue-700 cursor-pointer scrollbar-track-gray-300 gap-4  lg:scrollbar-hidden justify-center md:gap-12">
+      <div className="flex overflow-x-auto scrollbar-thin  scrollbar-thumb-blue-700 cursor-pointer scrollbar-track-gray-300 gap-4  md:gap-12">
         {error ? (
-          <Alert severity="error">Something went wrong</Alert>
+          <Alert severity="error" className="w-full flex justify-center">
+            Something went wrong
+          </Alert>
         ) : loading ? (
-          <CircularProgress />
+          <div className="w-full flex justify-center">
+            <CircularProgress />
+          </div>
         ) : (
           data?.map((item) => <Card {...item} key={item.id} />)
         )}

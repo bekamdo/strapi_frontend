@@ -42,8 +42,8 @@ const Navbar = () => {
             </div>
           </div>
           {/* secondItem */}
-          <div className="flex justify-between md:flex  items-center  text-xl">
-            <Link href="/">BENS STORE</Link>
+          <div className="flex justify-between md:flex  items-center  text-2xl text-bold text-blue-700">
+            <Link href="/">Belksi's Store</Link>
           </div>
           <div className="flex gap-10">
             <div
@@ -98,12 +98,24 @@ const Navbar = () => {
               !openModal ? "hidden" : "flex"
             } flex-col items-center self-end  py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md transition-all duration-200 ease-in-out`}
           >
-            <Link href="/products/1">Women </Link>
-            <Link href="/products/2">Men </Link>
-            <Link href="/products/3">Bags </Link>
-            <Link href="/products/5">Lab Coats</Link>
-            <Link href="/products/6">Medical Devices </Link>
-            <Link href="/products/4">Stethoscopes </Link>
+            <Link href="/products/1" onClick={() => setOpenModal(false)}>
+              Women{" "}
+            </Link>
+            <Link href="/products/2" onClick={() => setOpenModal(false)}>
+              Men{" "}
+            </Link>
+            <Link href="/products/3" onClick={() => setOpenModal(false)}>
+              Bags{" "}
+            </Link>
+            <Link href="/products/5" onClick={() => setOpenModal(false)}>
+              Lab Coats
+            </Link>
+            <Link href="/products/6" onClick={() => setOpenModal(false)}>
+              Medical Devices{" "}
+            </Link>
+            <Link href="/products/4" onClick={() => setOpenModal(false)}>
+              Stethoscopes{" "}
+            </Link>
           </div>
         </div>
       </nav>

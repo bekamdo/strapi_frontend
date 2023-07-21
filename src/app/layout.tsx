@@ -1,5 +1,6 @@
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
+import Notification from "./components/Notification/Notification";
 import "./globals.css";
 import { Providers } from "./redux/Provider";
 import { Inter } from "next/font/google";
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         <div className="flex flex-col justify-between min-h-screen container mx-auto overflow-hidden ">
           <Providers>
+            <Notification />
             <Navbar />
             {children}
             <Footer />

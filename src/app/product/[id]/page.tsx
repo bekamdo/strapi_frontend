@@ -26,7 +26,7 @@ const Product = ({ params }: { params: { id: string } }) => {
   const imageUrl3 = `http://localhost:1337${data?.attributes?.[selectedImg]?.data?.attributes.url}`;
 
   return (
-    <div className="flex justify-center h-full md:h-[80vh] flex-col mt-6 items-center md:flex-row gap-10 px-4 md:mt-1  py-6 ">
+    <div className="flex justify-center h-full md:h-[80vh] flex-col   items-center md:flex-row gap-10 px-4 mt-1  py-6 ">
       {error ? (
         <Alert severity="error">Something went wrong</Alert>
       ) : loading ? (
